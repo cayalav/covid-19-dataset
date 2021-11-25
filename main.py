@@ -1,5 +1,14 @@
+#Ref dataset = https://drive.google.com/u/0/uc?id=15yR9VskbAsWoLerZuwf3_XrxbmC0_ykG&export=download
+#Author = Carlos Ayala
+
+import pandas as pd
+url = 'covid_22_noviembre.csv'
+df = pd.read_csv(url)
 
 #1. Número de casos de Contagiados en el País.
+index = df.index
+num_of_rows = len(index)
+print(num_of_rows)
 
 #2. Número de Municipios Afectados
 
