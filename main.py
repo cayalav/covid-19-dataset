@@ -11,6 +11,8 @@ num_of_rows = len(index)
 print(num_of_rows)
 
 #2. Número de Municipios Afectados
+num_of_municipios = df.groupby(['Nombre municipio']).size().count()
+print(num_of_municipios)
 
 #3. Liste los municipios afectados (sin repetirlos)
 
