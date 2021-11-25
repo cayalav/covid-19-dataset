@@ -7,14 +7,16 @@ df = pd.read_csv(url)
 
 #1. Número de casos de Contagiados en el País.
 index = df.index
-num_of_rows = len(index)
-print(num_of_rows)
+ans = len(index)
+print(ans)
 
 #2. Número de Municipios Afectados
-num_of_municipios = df.groupby(['Nombre municipio']).size().count()
-print(num_of_municipios)
+ans = df.groupby(['Nombre municipio']).size().count()
+print(ans)
 
 #3. Liste los municipios afectados (sin repetirlos)
+ans = df.groupby(['Nombre municipio']).size()
+print(ans)
 
 #4. Número de personas que se encuentran en atención en casa
 
