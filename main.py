@@ -70,3 +70,11 @@ print('\n-------EJERCICIO14-------')
 mun_conta = df.groupby('Nombre municipio').count()
 top_10_mun = mun_conta['ID'].sort_values(ascending=False).head(10)
 print(top_10_mun)
+
+print('\n-------EJERCICIO15-------')
+mun_falle = df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').count()
+print(mun_falle['ID'].sort_values(ascending=False).head(10))
+
+print('\n-------EJERCICIO16-------')
+mun_recu = df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').count()
+print(mun_recu['ID'].sort_values(ascending=False).head(10))
