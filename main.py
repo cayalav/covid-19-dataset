@@ -128,3 +128,21 @@ ate_fe = df.groupby(['Recuperado', 'Fecha de diagnóstico'])['ID'].count()
 falle_recu = df.groupby(['Recuperado', 'Fecha de diagnóstico'])['ID'].count().unstack(0).fillna(0)
 falle_recu.cumsum().plot(y=['Fallecido', 'Recuperado'], title='27)')
 plt.show()
+
+print('\n-------EJERCICIO28-------')
+array_dep = list(df.groupby('Nombre departamento').count()['ID'].sort_values(ascending=False).head(10).keys())
+only_10_dep = df[df['Nombre departamento'].isin(array_dep)]
+groupby = ['Nombre departamento', 'Fecha de diagnóstico']
+con_10_dep = only_10_dep.groupby(groupby)['ID'].count()
+# contagiados
+df_co_dep = con_10_dep.unstack(0).fillna(0)
+df_co_dep.cumsum().plot(subplots=True, figsize=(14, 7), title='28)Contagiado')
+# recuperados
+groupby2 = ['Recuperado', 'Nombre departamento', 'Fecha de diagnóstico']
+con_10_dep2 = only_10_dep.groupby(groupby2)['ID'].count()
+df_co_depR = con_10_dep2['Recuperado'].unstack(0).fillna(0)
+df_co_depR.cumsum().plot(subplots=True, figsize=(14, 7), title='28)Recuperado')
+# fallecidos
+df_co_depF = con_10_dep2['Fallecido'].unstack(0).fillna(0)
+df_co_depF.cumsum().plot(subplots=True, figsize=(14, 7), title='28)Fallecido')
+plt.show()
