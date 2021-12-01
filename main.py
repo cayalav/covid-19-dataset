@@ -85,3 +85,7 @@ print(df.groupby('Nombre departamento').count())
 print('\n-------EJERCICIO18-------')
 contageado_sexo = df.groupby('Sexo')
 print(contageado_sexo.count()['ID'])
+
+print('\n-------EJERCICIO19-------')
+list_by = ['Sexo', 'Nombre municipio', 'Nombre departamento']
+print(df.groupby(list_by)['Edad'].mean())
