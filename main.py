@@ -164,3 +164,6 @@ df_co_munR.cumsum().plot(subplots=True, figsize=(14, 7), title='29)Recuperado')
 df_co_munF = con_10_mun2['Fallecido'].unstack(0).fillna(0)
 df_co_munF.cumsum().plot(subplots=True, figsize=(14, 7), title='29)Fallecido')
 plt.show()
+
+print('\n-------EJERCICIO30-------')
+print(df.groupby('Edad')['ID'].count().sort_values(ascending=False))
