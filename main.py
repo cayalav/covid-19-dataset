@@ -185,3 +185,10 @@ print('\n-------EJERCICIO34-------')
 por_tipo = df.groupby('Tipo de contagio')['ID'].count()
 por_tipo.plot(subplots=True, kind='bar', title='34)')
 plt.show()
+
+print('\n-------EJERCICIO35-------')
+values = [len(df), len(df[df['Ubicación del caso'] == 'Fallecido']), len(df[df['Recuperado'] == 'Recuperado'])]
+index = ['Contageado', 'fallecidos', 'recuperados']
+total_contagiados = pd.Series(values, index=index)
+total_contagiados.plot(subplots=True, kind='bar', title='35)')
+plt.show()
