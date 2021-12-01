@@ -120,3 +120,11 @@ print(df.groupby(['Nombre municipio', 'Ubicación del caso'])['ID'].count())
 
 print('\n-------EJERCICI26-------')
 print(df.groupby(['Nombre municipio'])['Edad'].mean())
+
+print('\n-------EJERCICIO27-------')
+aten = df.groupby('Fecha de diagnóstico')['ID'].count()
+df.groupby('Fecha de diagnóstico')['ID'].count().cumsum().plot()
+ate_fe = df.groupby(['Recuperado', 'Fecha de diagnóstico'])['ID'].count()
+falle_recu = df.groupby(['Recuperado', 'Fecha de diagnóstico'])['ID'].count().unstack(0).fillna(0)
+falle_recu.cumsum().plot(y=['Fallecido', 'Recuperado'], title='27)')
+plt.show()
