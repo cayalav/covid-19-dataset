@@ -117,3 +117,6 @@ print(df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').c
 
 print('\n-------EJERCICIO25-------')
 print(df.groupby(['Nombre municipio', 'Ubicación del caso'])['ID'].count())
+
+print('\n-------EJERCICI26-------')
+print(df.groupby(['Nombre municipio'])['Edad'].mean())
