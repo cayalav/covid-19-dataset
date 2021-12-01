@@ -29,3 +29,7 @@ print('municipios afectados: \n' + str(df['Nombre municipio'].unique()))
 print('\n-------EJERCICIO4-------')
 atencion_casa = df[df['Ubicación del caso'] == 'Casa']
 print('numero de personas en casa: ' + str(len(atencion_casa)))
+
+print('\n-------EJERCICIO5-------')
+recuperados = df[df['Recuperado'] == 'Recuperado']
+print('numero de personas recuperadas: ' + str(len(recuperados)))
