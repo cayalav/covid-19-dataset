@@ -146,3 +146,21 @@ df_co_depR.cumsum().plot(subplots=True, figsize=(14, 7), title='28)Recuperado')
 df_co_depF = con_10_dep2['Fallecido'].unstack(0).fillna(0)
 df_co_depF.cumsum().plot(subplots=True, figsize=(14, 7), title='28)Fallecido')
 plt.show()
+
+print('\n-------EJERCICIO29-------')
+array_mun = list(df.groupby('Nombre municipio').count()['ID'].sort_values(ascending=False).head(10).keys())
+only_10_mun = df[df['Nombre municipio'].isin(array_mun)]
+groupby = ['Nombre municipio', 'Fecha de diagnóstico']
+con_10_mun = only_10_mun.groupby(groupby)['ID'].count()
+# contagiados
+df_co_mun = con_10_mun.unstack(0).fillna(0)
+df_co_mun.cumsum().plot(subplots=True, figsize=(14, 7), title='29)Contagiado')
+# recuperados
+groupby2 = ['Recuperado', 'Nombre municipio', 'Fecha de diagnóstico']
+con_10_mun2 = only_10_mun.groupby(groupby2)['ID'].count()
+df_co_munR = con_10_mun2['Recuperado'].unstack(0).fillna(0)
+df_co_munR.cumsum().plot(subplots=True, figsize=(14, 7), title='29)Recuperado')
+# fallecidos
+df_co_munF = con_10_mun2['Fallecido'].unstack(0).fillna(0)
+df_co_munF.cumsum().plot(subplots=True, figsize=(14, 7), title='29)Fallecido')
+plt.show()
