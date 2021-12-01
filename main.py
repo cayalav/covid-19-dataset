@@ -102,3 +102,9 @@ tasa_mortalidad = (len(df[df['Ubicación del caso'] == 'Fallecido']) / len(df)) 
 tasa_recuperacion = (len(df[df['Recuperado'] == 'Recuperado']) / len(df)) * 100
 print('tasa de mortalidad: ' + "{:.6f}".format(tasa_mortalidad))
 print('tasa de recuperación: ' + "{:.6f}".format(tasa_recuperacion))
+
+print('\n-------EJERCICIO23-------')
+print('tasa de mortalidad:')
+print(df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').count()['ID'] / len(df) * 100)
+print('\ntasa de recuperación:')
+print(df[df['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').count()['ID'] / len(df) * 100)
