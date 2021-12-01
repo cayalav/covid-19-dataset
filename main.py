@@ -89,3 +89,7 @@ print(contageado_sexo.count()['ID'])
 print('\n-------EJERCICIO19-------')
 list_by = ['Sexo', 'Nombre municipio', 'Nombre departamento']
 print(df.groupby(list_by)['Edad'].mean())
+
+print('\n-------EJERCICIO20-------')
+pais_procedencia = df.groupby('Nombre del país').count()
+print(pais_procedencia['ID'].sort_values(ascending=False))
