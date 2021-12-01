@@ -52,3 +52,8 @@ print('departamentos afectados: \n' + str(df['Nombre departamento'].unique()))
 print('\n-------EJERCICIO10-------')
 tipos_casos = df.groupby('Ubicación del caso').count()
 print(tipos_casos['ID'].sort_values(ascending=False))
+
+print('\n-------EJERCICIO11-------')
+dep_conta = df.groupby('Nombre departamento').count()
+top_10_dep = dep_conta['ID'].sort_values(ascending=False).head(10)
+print(top_10_dep)
