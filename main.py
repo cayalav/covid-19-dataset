@@ -96,3 +96,9 @@ print(pais_procedencia['ID'].sort_values(ascending=False))
 
 print('\n-------EJERCICI21-------')
 print(df.sort_values(ascending=False, by='Fecha de diagnóstico'))
+
+print('\n-------EJERCICIO22-------')
+tasa_mortalidad = (len(df[df['Ubicación del caso'] == 'Fallecido']) / len(df)) * 100
+tasa_recuperacion = (len(df[df['Recuperado'] == 'Recuperado']) / len(df)) * 100
+print('tasa de mortalidad: ' + "{:.6f}".format(tasa_mortalidad))
+print('tasa de recuperación: ' + "{:.6f}".format(tasa_recuperacion))
