@@ -81,3 +81,7 @@ print(mun_recu['ID'].sort_values(ascending=False).head(10))
 
 print('\n-------EJERCICIO17-------')
 print(df.groupby('Nombre departamento').count())
+
+print('\n-------EJERCICIO18-------')
+contageado_sexo = df.groupby('Sexo')
+print(contageado_sexo.count()['ID'])
