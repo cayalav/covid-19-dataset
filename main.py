@@ -65,3 +65,8 @@ print(dep_falle['ID'].sort_values(ascending=False).head(10))
 print('\n-------EJERCICIO13-------')
 dep_recu = df[df['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').count()
 print(dep_recu['ID'].sort_values(ascending=False).head(10))
+
+print('\n-------EJERCICIO14-------')
+mun_conta = df.groupby('Nombre municipio').count()
+top_10_mun = mun_conta['ID'].sort_values(ascending=False).head(10)
+print(top_10_mun)
