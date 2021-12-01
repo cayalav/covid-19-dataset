@@ -45,3 +45,6 @@ print(tipos_casos['ID'].sort_values(ascending=False))
 print('\n-------EJERCICIO8-------')
 departamentos = df['Nombre departamento'].unique()
 print('numero de departamentos afectados: ' + str(len(departamentos)))
+
+print('\n-------EJERCICIO9-------')
+print('departamentos afectados: \n' + str(df['Nombre departamento'].unique()))
