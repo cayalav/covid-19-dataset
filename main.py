@@ -33,3 +33,7 @@ print('numero de personas en casa: ' + str(len(atencion_casa)))
 print('\n-------EJERCICIO5-------')
 recuperados = df[df['Recuperado'] == 'Recuperado']
 print('numero de personas recuperadas: ' + str(len(recuperados)))
+
+print('\n-------EJERCICIO6-------')
+fallecidas = df[df['Ubicación del caso'] == 'Fallecido']
+print('numero de personas fallecidas: ' + str(len(fallecidas)))
