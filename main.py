@@ -181,3 +181,7 @@ por_sexo = df.groupby('Sexo')['ID'].count()
 por_sexo.plot(subplots=True, kind='bar', title='33)')
 plt.show()
 
+print('\n-------EJERCICIO34-------')
+por_tipo = df.groupby('Tipo de contagio')['ID'].count()
+por_tipo.plot(subplots=True, kind='bar', title='34)')
+plt.show()
