@@ -61,3 +61,7 @@ print(top_10_dep)
 print('\n-------EJERCICIO12-------')
 dep_falle = df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').count()
 print(dep_falle['ID'].sort_values(ascending=False).head(10))
+
+print('\n-------EJERCICIO13-------')
+dep_recu = df[df['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').count()
+print(dep_recu['ID'].sort_values(ascending=False).head(10))
