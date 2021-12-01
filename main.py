@@ -114,3 +114,6 @@ print('tasa de mortalidad:')
 print(df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').count()['ID'] / len(df) * 100)
 print('\ntasa de recuperación:')
 print(df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').count()['ID'] / len(df) * 100)
+
+print('\n-------EJERCICIO25-------')
+print(df.groupby(['Nombre municipio', 'Ubicación del caso'])['ID'].count())
