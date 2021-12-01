@@ -93,3 +93,6 @@ print(df.groupby(list_by)['Edad'].mean())
 print('\n-------EJERCICIO20-------')
 pais_procedencia = df.groupby('Nombre del país').count()
 print(pais_procedencia['ID'].sort_values(ascending=False))
+
+print('\n-------EJERCICI21-------')
+print(df.sort_values(ascending=False, by='Fecha de diagnóstico'))
