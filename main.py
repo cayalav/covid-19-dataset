@@ -48,3 +48,7 @@ print('numero de departamentos afectados: ' + str(len(departamentos)))
 
 print('\n-------EJERCICIO9-------')
 print('departamentos afectados: \n' + str(df['Nombre departamento'].unique()))
+
+print('\n-------EJERCICIO10-------')
+tipos_casos = df.groupby('Ubicación del caso').count()
+print(tipos_casos['ID'].sort_values(ascending=False))
