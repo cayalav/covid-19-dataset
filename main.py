@@ -80,4 +80,4 @@ mun_recu = df[df['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipi
 print(mun_recu['ID'].sort_values(ascending=False).head(10))
 
 print('\n-------EJERCICIO17-------')
-print(df.groupby('Nombre departamento').count())
+print(df.groupby('Nombre departamento').count()) 
