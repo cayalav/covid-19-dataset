@@ -171,3 +171,7 @@ print(df.groupby('Edad')['ID'].count().sort_values(ascending=False))
 print('\n-------EJERCICIO31-------')
 por_atencion = df.groupby('Ubicación del caso')['ID'].count()
 print(por_atencion.sort_values(ascending=False) / len(df) * 100)
+
+print('\n-------EJERCICIO32-------')
+df.groupby('Ubicación del caso')['ID'].count().plot(subplots=True, kind='bar', title='32)')
+plt.show()
