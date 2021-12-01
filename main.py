@@ -41,3 +41,7 @@ print('numero de personas fallecidas: ' + str(len(fallecidas)))
 print('\n-------EJERCICIO7-------')
 tipos_casos = df.groupby('Tipo de contagio').count()
 print(tipos_casos['ID'].sort_values(ascending=False))
+
+print('\n-------EJERCICIO8-------')
+departamentos = df['Nombre departamento'].unique()
+print('numero de departamentos afectados: ' + str(len(departamentos)))
